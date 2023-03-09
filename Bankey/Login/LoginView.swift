@@ -55,6 +55,9 @@ extension LoginView {
         dividerView.translatesAutoresizingMaskIntoConstraints = false
         dividerView.backgroundColor = .secondarySystemFill
         
+        // Core Animation sayesinde animasyon, corner vs yönetebiliyoruz.
+        layer.cornerRadius = 5
+        clipsToBounds = true // Background image gibi şeylerin içeri doğru olmasını sağlıyor.
     }
     
     func layout() {
