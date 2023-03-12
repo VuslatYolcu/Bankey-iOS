@@ -49,13 +49,19 @@ extension AppDelegate {
 // 5- LoginViewController will say, Hey! login is completed, you can do whatever you want.
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        setRootViewController(onboardingContrainerViewController)
+        if LocalState.hasOnboarded {
+            setRootViewController(dummyViewController)
+        } else {
+            setRootViewController(onboardingContrainerViewController)
+        }
+        
     }
 }
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
         setRootViewController(dummyViewController, animated: true)
+        LocalState.hasOnboarded = true
     }
 }
 
