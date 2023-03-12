@@ -7,6 +7,12 @@
 
 import UIKit
 
+// 1- Define protocol
+protocol LoginViewControllerDelegate: AnyObject {
+    // func didLogin(_ sender: LoginViewController) // pass data
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     
     let loginView = LoginView()
@@ -14,6 +20,9 @@ class LoginViewController: UIViewController {
     let errorMessageLabel = UILabel()
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
+    
+    // 2- Create your delegate
+    weak var delegate: LoginViewControllerDelegate?
     
     var userName: String? {
         return loginView.userNameTextField.text
@@ -123,14 +132,18 @@ extension LoginViewController {
             return
         }
         
+        /*
         if userName.isEmpty || password.isEmpty {
             configureView(withMessage: "Username / password cannot be blank")
             return
         }
+         */
         
         // Hard coded control
-        if userName == "Kevin" && password == "welcome" {
+        if userName == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
+            // 3- We are saying, whoever uses this protocol can see yes we did login -
+            delegate?.didLogin()
         } else {
             configureView(withMessage: "Incorrect username / password")
         }

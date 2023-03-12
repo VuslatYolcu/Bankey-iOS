@@ -12,16 +12,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    let loginViewController = LoginViewController()
+    let onboardingContrainerViewController = OnboardingContainerViewController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        //window?.rootViewController = LoginViewController()
-        window?.rootViewController = OnboardingContainerViewController()
-        //window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in 1989.")
+        
+        // 4- We are assinging as a delegat so that any signals from loginViewController, we can receive that information
+        loginViewController.delegate = self
+        onboardingContrainerViewController.delegate = self
+        window?.rootViewController = onboardingContrainerViewController
     
         return true
     }
-
 }
 
+// 5- LoginViewController will say, Hey! login is completed, you can do whatever you want.
+extension AppDelegate: LoginViewControllerDelegate {
+    func didLogin() {
+        print("Did login")
+    }
+}
+
+extension AppDelegate: OnboardingContainerViewControllerDelegate {
+    func didFinishOnboarding() {
+        print("Did finish onboarding")
+    }
+}
