@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let loginViewController = LoginViewController()
     let onboardingContrainerViewController = OnboardingContainerViewController()
-    let dummyViewController = DummyViewController()
     let mainViewController = MainViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -27,11 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 4- We are assinging as a delegate so that any signals from loginViewController, we can receive that information
         loginViewController.delegate = self
         onboardingContrainerViewController.delegate = self
-        dummyViewController.delegate = self
         
-        //window?.rootViewController = mainViewController
-        window?.rootViewController = AccountSummaryViewController()
+        let vc = mainViewController
+        vc.setStatusBar()
         
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
+        
+        window?.rootViewController = mainViewController
         return true
     }
 }
@@ -54,7 +56,7 @@ extension AppDelegate {
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
         if LocalState.hasOnboarded {
-            setRootViewController(dummyViewController)
+            setRootViewController(mainViewController)
         } else {
             setRootViewController(onboardingContrainerViewController)
         }
@@ -64,7 +66,7 @@ extension AppDelegate: LoginViewControllerDelegate {
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
-        setRootViewController(dummyViewController, animated: true)
+        setRootViewController(mainViewController, animated: true)
         LocalState.hasOnboarded = true
     }
 }
