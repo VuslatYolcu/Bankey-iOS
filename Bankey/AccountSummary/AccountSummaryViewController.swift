@@ -12,9 +12,21 @@ class AccountSummaryViewController: UIViewController {
     var accounts: [AccountSummaryCell.ViewModel] = []
     var tableView = UITableView()
     
+    // lazy vars are only instantiated when needed
+    lazy var logoutBarButton: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
+        barButtonItem.tintColor = .label // It makes bar button's color same with other label's colo  r so that in case of dark mode is enabled, it will adapt
+        return barButtonItem
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = logoutBarButton
     }
 }
 
@@ -107,5 +119,12 @@ extension AccountSummaryViewController {
         accounts.append(masterCard)
         accounts.append(investment1)
         accounts.append(investment2)
+    }
+}
+
+// MARK: Action
+extension AccountSummaryViewController {
+    @objc func logoutTapped(sender: UIButton) {
+        
     }
 }
