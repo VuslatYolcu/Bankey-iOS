@@ -181,10 +181,15 @@ extension LoginViewController {
 extension LoginViewController {
     private func animate() {
         let animator1 = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
-            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
             self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
             self.view.layoutIfNeeded()
         }
         animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 1)
     }
 }
