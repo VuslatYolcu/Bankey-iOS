@@ -164,7 +164,7 @@ extension LoginViewController {
          */
         
         // Hard coded control
-        if userName == "Vuslat" && password == "Yolcu" {
+        if userName == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
             // 3- We are saying, whoever uses this protocol can see yes we did login -
             delegate?.didLogin()
