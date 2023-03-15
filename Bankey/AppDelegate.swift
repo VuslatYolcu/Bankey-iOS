@@ -27,14 +27,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onboardingContrainerViewController.delegate = self
         
-        let vc = mainViewController
-        vc.setStatusBar()
-        
+        registerForNotifications()
+        displayLogin()
+        return true
+    }
+    
+    private func registerForNotifications() {
+        // NotificationCenter.default is like a Singleton instance
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .logout, object: nil)
+    }
+    
+    private func displayLogin() {
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreens() {
+        if LocalState.hasOnboarded {
+            prepMainView()
+            setRootViewController(mainViewController)
+        } else {
+            setRootViewController(onboardingContrainerViewController)
+        }
+    }
+    
+    private func prepMainView() {
+        mainViewController.setStatusBar()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = appColor
-        
-        window?.rootViewController = mainViewController
-        return true
     }
 }
 
@@ -55,24 +74,20 @@ extension AppDelegate {
 // 5- LoginViewController will say, Hey! login is completed, you can do whatever you want.
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        if LocalState.hasOnboarded {
-            setRootViewController(mainViewController)
-        } else {
-            setRootViewController(onboardingContrainerViewController)
-        }
-        
+        displayNextScreens()
     }
 }
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
         setRootViewController(mainViewController, animated: true)
+        prepMainView()
         LocalState.hasOnboarded = true
     }
 }
 
 extension AppDelegate: LogoutDelegate {
-    func didLogout() {
+    @objc func didLogout() {
         setRootViewController(loginViewController, animated: true)
     }
 }
