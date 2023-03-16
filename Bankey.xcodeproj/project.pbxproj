@@ -24,6 +24,7 @@
 		11D21AA729BF8AD200676CEC /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D21AA629BF8AD200676CEC /* AccountSummaryHeaderView.swift */; };
 		11D21AA929BF8B1B00676CEC /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D21AA829BF8B1B00676CEC /* AccountSummaryHeaderView.xib */; };
 		11E814D829C3142F00CB28E8 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E814D729C3142F00CB28E8 /* Date+Utils.swift */; };
+		11E814DA29C343FE00CB28E8 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E814D929C343FE00CB28E8 /* AccountSummaryViewController+Networking.swift */; };
 		11F62D0B29BA0D1C00CB587A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F62D0A29BA0D1C00CB587A /* AppDelegate.swift */; };
 		11F62D0F29BA0D1C00CB587A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F62D0E29BA0D1C00CB587A /* LoginViewController.swift */; };
 		11F62D1429BA0D1D00CB587A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F62D1329BA0D1D00CB587A /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		11D21AA629BF8AD200676CEC /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		11D21AA829BF8B1B00676CEC /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		11E814D729C3142F00CB28E8 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		11E814D929C343FE00CB28E8 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		11F62D0729BA0D1C00CB587A /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F62D0A29BA0D1C00CB587A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F62D0E29BA0D1C00CB587A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				11D21AA429BF85C800676CEC /* AccountSummaryViewController.swift */,
+				11E814D929C343FE00CB28E8 /* AccountSummaryViewController+Networking.swift */,
 				115F02DF29C08BFF009DFE2A /* Header */,
 				115F02E029C08C1E009DFE2A /* Cells */,
 			);
@@ -334,6 +337,7 @@
 				11F62D0B29BA0D1C00CB587A /* AppDelegate.swift in Sources */,
 				11C71EBC29C2251E00D18DBA /* NSNotification.Name.swift in Sources */,
 				114EB78829BB5D71007E08BB /* OnboardingContainerViewController.swift in Sources */,
+				11E814DA29C343FE00CB28E8 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
