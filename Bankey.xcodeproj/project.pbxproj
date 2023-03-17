@@ -16,6 +16,8 @@
 		115F02E229C08C47009DFE2A /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115F02E129C08C47009DFE2A /* AccountSummaryCell.swift */; };
 		115F02E429C0C90D009DFE2A /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115F02E329C0C90D009DFE2A /* DecimalUtils.swift */; };
 		115F02E629C0C970009DFE2A /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115F02E529C0C970009DFE2A /* CurrencyFormatter.swift */; };
+		119D6AFD29C452A7005B0BFB /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119D6AFC29C452A7005B0BFB /* ProfileTests.swift */; };
+		119D6AFF29C45338005B0BFB /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119D6AFE29C45338005B0BFB /* AccountTests.swift */; };
 		11BB017129C2576700A4E98C /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB017029C2576700A4E98C /* ShakeyBellView.swift */; };
 		11C71EBA29C1DCBB00D18DBA /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C71EB929C1DCBB00D18DBA /* CurrencyFormatterTests.swift */; };
 		11C71EBC29C2251E00D18DBA /* NSNotification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C71EBB29C2251E00D18DBA /* NSNotification.Name.swift */; };
@@ -52,6 +54,8 @@
 		115F02E129C08C47009DFE2A /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		115F02E329C0C90D009DFE2A /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		115F02E529C0C970009DFE2A /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		119D6AFC29C452A7005B0BFB /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		119D6AFE29C45338005B0BFB /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		11BB017029C2576700A4E98C /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		11C71EB029C1DBA700D18DBA /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C71EB929C1DCBB00D18DBA /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
@@ -129,6 +133,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		119D6AFA29C4527F005B0BFB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				11C71EB929C1DCBB00D18DBA /* CurrencyFormatterTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		119D6AFB29C45292005B0BFB /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				119D6AFC29C452A7005B0BFB /* ProfileTests.swift */,
+				119D6AFE29C45338005B0BFB /* AccountTests.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		11BB016F29C2572B00A4E98C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +161,8 @@
 		11C71EB129C1DBA700D18DBA /* BankeyUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				11C71EB929C1DCBB00D18DBA /* CurrencyFormatterTests.swift */,
+				119D6AFB29C45292005B0BFB /* AccountSummary */,
+				119D6AFA29C4527F005B0BFB /* Utils */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -312,6 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11C71EBA29C1DCBB00D18DBA /* CurrencyFormatterTests.swift in Sources */,
+				119D6AFF29C45338005B0BFB /* AccountTests.swift in Sources */,
+				119D6AFD29C452A7005B0BFB /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
