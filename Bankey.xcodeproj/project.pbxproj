@@ -11,6 +11,8 @@
 		11028DFF29BE2A8000E2A1A8 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11028DFE29BE2A8000E2A1A8 /* LocalState.swift */; };
 		11028E0129BE46C500E2A1A8 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11028E0029BE46C500E2A1A8 /* UIViewController+Utils.swift */; };
 		11028E0329BE487300E2A1A8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11028E0229BE487300E2A1A8 /* MainViewController.swift */; };
+		11262F7129C4881000F48945 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11262F7029C4881000F48945 /* SkeletonLoadable.swift */; };
+		11262F7329C488FA00F48945 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11262F7229C488FA00F48945 /* SkeletonCell.swift */; };
 		114EB78829BB5D71007E08BB /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EB78729BB5D71007E08BB /* OnboardingContainerViewController.swift */; };
 		114EB78A29BB66E6007E08BB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EB78929BB66E6007E08BB /* OnboardingViewController.swift */; };
 		115F02E229C08C47009DFE2A /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115F02E129C08C47009DFE2A /* AccountSummaryCell.swift */; };
@@ -49,6 +51,8 @@
 		11028DFE29BE2A8000E2A1A8 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		11028E0029BE46C500E2A1A8 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		11028E0229BE487300E2A1A8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		11262F7029C4881000F48945 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		11262F7229C488FA00F48945 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		114EB78729BB5D71007E08BB /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		114EB78929BB66E6007E08BB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		115F02E129C08C47009DFE2A /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				115F02E129C08C47009DFE2A /* AccountSummaryCell.swift */,
+				11262F7029C4881000F48945 /* SkeletonLoadable.swift */,
+				11262F7229C488FA00F48945 /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11028E0129BE46C500E2A1A8 /* UIViewController+Utils.swift in Sources */,
+				11262F7329C488FA00F48945 /* SkeletonCell.swift in Sources */,
 				11E814D829C3142F00CB28E8 /* Date+Utils.swift in Sources */,
 				11FDA11729BA25EE0066EB54 /* LoginView.swift in Sources */,
 				11028DFF29BE2A8000E2A1A8 /* LocalState.swift in Sources */,
@@ -361,6 +368,7 @@
 				11F62D0B29BA0D1C00CB587A /* AppDelegate.swift in Sources */,
 				11C71EBC29C2251E00D18DBA /* NSNotification.Name.swift in Sources */,
 				114EB78829BB5D71007E08BB /* OnboardingContainerViewController.swift in Sources */,
+				11262F7129C4881000F48945 /* SkeletonLoadable.swift in Sources */,
 				11E814DA29C343FE00CB28E8 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
