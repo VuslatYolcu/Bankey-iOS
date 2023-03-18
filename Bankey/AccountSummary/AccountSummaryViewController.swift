@@ -22,6 +22,9 @@ class AccountSummaryViewController: UIViewController {
     let headerView = AccountSummaryHeaderView(frame: .zero)
     let refreshControl = UIRefreshControl()
     
+    // Networking
+    var profileManager: ProfileManageable = ProfileManager()
+    
     var isLoaded = false
     
     // lazy vars are only instantiated when needed
@@ -132,7 +135,7 @@ extension AccountSummaryViewController {
         let userId = String(Int.random(in: 1..<4))
         
         group.enter()
-        fetchProfile(forUserId: userId) { result in
+        profileManager.fetchProfile(forUserId: userId) { result in
             switch result {
             case .success(let profile):
                 self.profile = profile
