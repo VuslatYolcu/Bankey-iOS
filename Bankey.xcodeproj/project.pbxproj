@@ -19,6 +19,7 @@
 		115F02E429C0C90D009DFE2A /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115F02E329C0C90D009DFE2A /* DecimalUtils.swift */; };
 		115F02E629C0C970009DFE2A /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115F02E529C0C970009DFE2A /* CurrencyFormatter.swift */; };
 		118D80D329C5E6CD00E8A0AD /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D80D229C5E6CD00E8A0AD /* ProfileManager.swift */; };
+		118D80D529C5E96900E8A0AD /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D80D429C5E96900E8A0AD /* AccountSummaryViewControllerTests.swift */; };
 		119D6AFD29C452A7005B0BFB /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119D6AFC29C452A7005B0BFB /* ProfileTests.swift */; };
 		119D6AFF29C45338005B0BFB /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119D6AFE29C45338005B0BFB /* AccountTests.swift */; };
 		11BB017129C2576700A4E98C /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB017029C2576700A4E98C /* ShakeyBellView.swift */; };
@@ -60,6 +61,7 @@
 		115F02E329C0C90D009DFE2A /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		115F02E529C0C970009DFE2A /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		118D80D229C5E6CD00E8A0AD /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		118D80D429C5E96900E8A0AD /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		119D6AFC29C452A7005B0BFB /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		119D6AFE29C45338005B0BFB /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		11BB017029C2576700A4E98C /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				119D6AFC29C452A7005B0BFB /* ProfileTests.swift */,
 				119D6AFE29C45338005B0BFB /* AccountTests.swift */,
+				118D80D429C5E96900E8A0AD /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				11C71EBA29C1DCBB00D18DBA /* CurrencyFormatterTests.swift in Sources */,
 				119D6AFF29C45338005B0BFB /* AccountTests.swift in Sources */,
 				119D6AFD29C452A7005B0BFB /* ProfileTests.swift in Sources */,
+				118D80D529C5E96900E8A0AD /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
